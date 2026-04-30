@@ -1,0 +1,23 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>DataUploadServlet</servlet-name>
+        <servlet-class>DataUploadServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DataUploadServlet</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetDataServlet</servlet-name>
+        <servlet-class>GetDataServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetDataServlet</servlet-name>
+        <url-pattern>/getData</url-pattern>
+    </servlet-mapping>
+
+</web-app>
