@@ -1,0 +1,23 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>CodeUploadServlet</servlet-name>
+        <servlet-class>CodeUploadServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CodeUploadServlet</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetCodeServlet</servlet-name>
+        <servlet-class>GetCodeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetCodeServlet</servlet-name>
+        <url-pattern>/getCode</url-pattern>
+    </servlet-mapping>
+
+</web-app>
