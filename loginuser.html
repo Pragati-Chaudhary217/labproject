@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Distributed Web Server UI</title>
+    <style>
+        /* Base Cyberpunk/Dark Theme */
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #161b22;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            border: 1px solid #30363d;
+            width: 500px;
+        }
+
+        h2 {
+            color: #58a6ff;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #21262d;
+            padding-bottom: 10px;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #8b949e;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Inputs and Textareas styled like a Code Editor */
+        input[type="text"], textarea {
+            width: 100%;
+            background-color: #010409;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #79c0ff;
+            padding: 12px;
+            font-family: 'Courier New', monospace;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:focus, textarea:focus {
+            outline: none;
+            border-color: #58a6ff;
+            box-shadow: 0 0 8px rgba(88, 166, 255, 0.3);
+        }
+
+        /* Button Styling */
+        input[type="submit"] {
+            width: 100%;
+            background-color: #238636;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2ea043;
+        }
+
+        .server-tag {
+            font-size: 0.7rem;
+            color: #f0883e;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>System Terminal</h2>
+        <form action="MainControllerServlet" method="POST">
+            <label>USER ID <span class="server-tag">[Interfacing Server]</span></label>
+            <input type="text" name="uID" placeholder="admin_node_01" required>
+            
+            <br><br>
+            
+            <label>SOURCE CODE <span class="server-tag">[Code Server]</span></label>
+            <textarea name="userCode" rows="8" placeholder="public static void main..."></textarea>
+            
+            <br><br>
+            
+            <label>EXECUTION DATA <span class="server-tag">[Data Server]</span></label>
+            <textarea name="userData" rows="4" placeholder='{"input": "values"}'></textarea>
+            
+            <input type="submit" value="INITIALIZE DISTRIBUTED EXECUTION">
+        </form>
+    </div>
+</body>
+</html>
