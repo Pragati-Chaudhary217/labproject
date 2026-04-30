@@ -1,0 +1,28 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>UploadServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/uploadCode</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/uploadData</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ExecuteServlet</servlet-name>
+        <servlet-class>ExecuteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ExecuteServlet</servlet-name>
+        <url-pattern>/execute</url-pattern>
+    </servlet-mapping>
+
+</web-app>
